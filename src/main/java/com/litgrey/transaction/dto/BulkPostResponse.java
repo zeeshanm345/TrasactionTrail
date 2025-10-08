@@ -13,6 +13,7 @@ public class BulkPostResponse {
     private String porOrgacode;
     private String accountNumber;
     private int postedCount;
+    private Long requestId;
     private List<Long> createdTranIds;
     private String message;
 }

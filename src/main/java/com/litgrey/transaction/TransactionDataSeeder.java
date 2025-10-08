@@ -29,17 +29,30 @@ public class TransactionDataSeeder implements CommandLineRunner {
                 new TransactionType.TransactionTypeId("001", "104"), "Receivable Payment"));
 
         // --- Seed lg_pr_charges ---
-        chargesRepo.save(new Charges("001", "01", "Sales Order"));
-        chargesRepo.save(new Charges("001", "02", "Purchase Order"));
-        chargesRepo.save(new Charges("001", "03", "Payment"));
+        chargesRepo.save(new Charges(1L, "001", "01", "Sales Order"));
+        chargesRepo.save(new Charges(2L,"001", "02", "Purchase Order"));
+        chargesRepo.save(new Charges(3L, "001", "03", "Payment"));
 
         // --- Seed lg_gp_transactioncharge ---
-        transactionChargeRepo.save(new TransactionCharge(
-                new TransactionChargeId("03", "001", "103"),
-                "GL103PAY", "Payable Payment Charge"));
-        transactionChargeRepo.save(new TransactionCharge(
-                new TransactionChargeId("03", "001", "104"),
-                "GL104REC", "Receivable Payment Charge"));
+        transactionChargeRepo.save(
+                TransactionCharge.builder()
+                        .chrgcode("03")
+                        .porOrgacode("001")
+                        .trancode("103")
+                        .glcode("GL103PAY")
+                        .chargedesc("Payment Charge (Payable)")
+                        .build()
+        );
+
+        transactionChargeRepo.save(
+                TransactionCharge.builder()
+                        .chrgcode("03")
+                        .porOrgacode("001")
+                        .trancode("104")
+                        .glcode("GL104REC")
+                        .chargedesc("Payment Charge (Receivable)")
+                        .build()
+        );
 
         System.out.println("✅ Reference data seeded successfully:");
         System.out.println(" - Transaction Types: 101, 102, 103, 104");

@@ -77,6 +77,18 @@ public class TransactionService {
                 .build();
     }
 
+    /**
+     * Overloaded method to handle multiple BulkPostRequests at once.
+     */
+    @Transactional
+    public List<BulkPostResponse> postBulk(List<BulkPostRequest> requests) {
+        List<BulkPostResponse> responses = new ArrayList<>();
+        for (BulkPostRequest req : requests) {
+            responses.add(postBulk(req));
+        }
+        return responses;
+    }
+
     @Transactional
     public void cancelTransaction(Long tranId, String user) {
         PaymentTransactionTrail t = trailRepo.findById(tranId).orElseThrow(() -> new IllegalArgumentException("Not found"));
@@ -106,7 +118,7 @@ public class TransactionService {
                 .build();
         PaymentTransactionTrail saved = trailRepo.save(rev);
         // mark original as reversed
-        original.setIsReversal(true);
+        original.setReversal(true);
         trailRepo.save(original);
         return saved.getTranId();
     }

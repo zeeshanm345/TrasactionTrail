@@ -14,6 +14,7 @@ public class BulkPostRequest {
     private String porOrgacode;
     private String accountNumber;
     private String transType; // 103 or 104
+    private BigDecimal amount;
     private String createdBy;
     private Long requestId;
     private List<TransactionChargeRequest> charges;
