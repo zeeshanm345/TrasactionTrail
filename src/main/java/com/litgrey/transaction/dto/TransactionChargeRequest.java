@@ -11,7 +11,5 @@ import java.math.BigDecimal;
 @Builder
 public class TransactionChargeRequest {
     private String chrgcode;
-    private String glcode;
-    private String chargedesc;
     private java.math.BigDecimal amount;
 }
