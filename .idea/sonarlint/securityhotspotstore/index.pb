@@ -63,3 +63,13 @@ s
 Csrc/main/java/com/litgrey/transaction/entity/TransactionCharge.java,0\5\054f0db5c97ea1f713c4b9ef56a25fbee9698d55
 i
 9src/main/java/com/litgrey/transaction/entity/Charges.java,2\b\2b39a00e338f1f4f3ff65e4df8115c6dddfa5b3a
+G
+FEATURE_UPDATE_NOTES.md,b\4\b4e7444d6714d4f2aeaafa3eb34006d2815252cb
+w
+G.idea/sonarlint/issuestore/b/4/b4e7444d6714d4f2aeaafa3eb34006d2815252cb,b\3\b3bd0b1bd1883a3ecf2c0cc24639043dae4bf332
+Å
+Q.idea/sonarlint/securityhotspotstore/b/4/b4e7444d6714d4f2aeaafa3eb34006d2815252cb,b\5\b50476814f5fed138072f6a460fac379d01e52f2
+w
+G.idea/sonarlint/issuestore/4/8/48012468d9592d5243bbf1c9aa73456e5e82d2fc,5\8\58813571bebf6dd1014e07a37f124639e8c227c6
+Å
+Q.idea/sonarlint/securityhotspotstore/4/8/48012468d9592d5243bbf1c9aa73456e5e82d2fc,4\b\4b965944a01c0a7f132b5b23c727cf434bbb61ac
